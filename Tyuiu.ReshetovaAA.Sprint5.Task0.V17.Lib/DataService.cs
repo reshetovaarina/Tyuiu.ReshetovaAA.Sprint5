@@ -8,14 +8,13 @@ namespace Tyuiu.ReshetovaAA.Sprint5.Task0.V17.Lib
     {
         public string SaveToFileTextData(int x)
         {
-
-            string path = Path.Combine(Directory.GetCurrentDirectory(), "OutPutFileTask0.txt");
-
+            string tempDir = Path.GetTempPath();
+            string path = Path.Combine(tempDir, "OutPutFileTask0.txt");
 
             double result = 2.4 * Math.Pow(x, 3)
-                            + 0.4 * Math.Pow(x, 2)
-                            - 1.4 * x
-                            + 4.1;
+                          + 0.4 * Math.Pow(x, 2)
+                          - 1.4 * x
+                          + 4.1;
 
             result = Math.Round(result, 3);
 
