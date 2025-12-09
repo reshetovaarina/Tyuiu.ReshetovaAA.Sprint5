@@ -12,11 +12,10 @@ namespace Tyuiu.ReshetovaAA.Sprint5.Task4.V18.Test
         {
             string path = @"C:\DataSprint5\InPutDataFileTask4V18.txt";
 
-            FileInfo fi = new FileInfo(path);
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
 
-            bool fileExists = fi.Exists;
             bool wait = true;
-
             Assert.AreEqual(wait, fileExists);
         }
     }
