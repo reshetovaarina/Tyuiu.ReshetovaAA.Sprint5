@@ -8,7 +8,7 @@ namespace Tyuiu.ReshetovaAA.Sprint5.Task7.V12.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            string pathSaveFile = $"{Directory.GetCurrentDirectory()}\\OutPutDataFileTask7V12.txt";
+            string pathSaveFile = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V12.txt");
 
             FileInfo fileInfo = new FileInfo(pathSaveFile);
             bool fileExists = fileInfo.Exists;
